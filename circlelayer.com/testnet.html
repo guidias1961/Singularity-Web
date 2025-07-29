@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+
+<!-- Mirrored from circlelayer.com/testnet by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jul 2025 20:54:53 GMT -->
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="assets/css/tailwind-3.3.3.css" />
+    <link rel="stylesheet" href="assets/css/style1.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <title>Testnet - High-Performance EVM-Compatible Blockchain</title>
+    <meta name="description" content="" />
+    <meta name="application-name" content="" />
+
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://testnet.circle-layer.xyz/" />
+    <meta property="og:site_name" content="Circle Layer Testnet" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@CircleLayer" />
+    <meta name="twitter:creator" content="@CircleLayer" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image:type" content="image/jpeg" />
+    <meta name="twitter:image:width" content="1200" />
+    <meta name="twitter:image:height" content="630" />
+
+    <link rel="shortcut icon" href="assets/images/favicon-192x192.png" />
+    <link rel="icon" href="assets/images/favicon-192x192.png" type="image/x-icon" sizes="192x192" />
+    <link rel="icon" href="assets/images/favicon-192x192.png" sizes="any" />
+    <link rel="icon" href="assets/images/favicon-192x192.png" type="image/svg+xml" />
+    <link rel="icon" href="assets/images/favicon-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="icon" href="assets/images/favicon-192x192.png" sizes="512x512" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/images/favicon-192x192.png" sizes="180x180" type="image/png" />
+
+    <style>
+        .bg-\[hsla\(220\2c 10\%\2c 12\%\2c 1\)\] {
+            background-color: #103c94;
+        }
+
+        :where(html[dir="ltr"]),
+        :where([data-sonner-toaster][dir="ltr"]) {
+            --toast-icon-margin-start: -3px;
+            --toast-icon-margin-end: 4px;
+            --toast-svg-margin-start: -1px;
+            --toast-svg-margin-end: 0px;
+            --toast-button-margin-start: auto;
+            --toast-button-margin-end: 0;
+            --toast-close-button-start: 0;
+            --toast-close-button-end: unset;
+            --toast-close-button-transform: translate(-35%, -35%)
+        }
+
+        :where(html[dir="rtl"]),
+        :where([data-sonner-toaster][dir="rtl"]) {
+            --toast-icon-margin-start: 4px;
+            --toast-icon-margin-end: -3px;
+            --toast-svg-margin-start: 0px;
+            --toast-svg-margin-end: -1px;
+            --toast-button-margin-start: 0;
+            --toast-button-margin-end: auto;
+            --toast-close-button-start: unset;
+            --toast-close-button-end: 0;
+            --toast-close-button-transform: translate(35%, -35%)
+        }
+
+        :where([data-sonner-toaster]) {
+            position: fixed;
+            width: var(--width);
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            --gray1: hsl(0, 0%, 99%);
+            --gray2: hsl(0, 0%, 97.3%);
+            --gray3: hsl(0, 0%, 95.1%);
+            --gray4: hsl(0, 0%, 93%);
+            --gray5: hsl(0, 0%, 90.9%);
+            --gray6: hsl(0, 0%, 88.7%);
+            --gray7: hsl(0, 0%, 85.8%);
+            --gray8: hsl(0, 0%, 78%);
+            --gray9: hsl(0, 0%, 56.1%);
+            --gray10: hsl(0, 0%, 52.3%);
+            --gray11: hsl(0, 0%, 43.5%);
+            --gray12: hsl(0, 0%, 9%);
+            --border-radius: 8px;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            outline: none;
+            z-index: 999999999;
+            transition: transform .4s ease
+        }
+
+        :where([data-sonner-toaster][data-lifted="true"]) {
+            transform: translateY(-10px)
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            :where([data-sonner-toaster][data-lifted="true"]) {
+                transform: none
+            }
+        }
+
+        :where([data-sonner-toaster][data-x-position="right"]) {
+            right: var(--offset-right)
+        }
+
+        :where([data-sonner-toaster][data-x-position="left"]) {
+            left: var(--offset-left)
+        }
+
+        :where([data-sonner-toaster][data-x-position="center"]) {
+            left: 50%;
+            transform: translate(-50%)
+        }
+
+        :where([data-sonner-toaster][data-y-position="top"]) {
+            top: var(--offset-top)
+        }
+
+        :where([data-sonner-toaster][data-y-position="bottom"]) {
+            bottom: var(--offset-bottom)
+        }
+
+        :where([data-sonner-toast]) {
+            --y: translateY(100%);
+            --lift-amount: calc(var(--lift) * var(--gap));
+            z-index: var(--z-index);
+            position: absolute;
+            opacity: 0;
+            transform: var(--y);
+            filter: blur(0);
+            touch-action: none;
+            transition: transform .4s, opacity .4s, height .4s, box-shadow .2s;
+            box-sizing: border-box;
+            outline: none;
+            overflow-wrap: anywhere
+        }
+
+        :where([data-sonner-toast][data-styled="true"]) {
+            padding: 16px;
+            background: var(--normal-bg);
+            border: 1px solid var(--normal-border);
+            color: var(--normal-text);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px #0000001a;
+            width: var(--width);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px
+        }
+
+        :where([data-sonner-toast]:focus-visible) {
+            box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+        }
+
+        :where([data-sonner-toast][data-y-position="top"]) {
+            top: 0;
+            --y: translateY(-100%);
+            --lift: 1;
+            --lift-amount: calc(1 * var(--gap))
+        }
+
+        :where([data-sonner-toast][data-y-position="bottom"]) {
+            bottom: 0;
+            --y: translateY(100%);
+            --lift: -1;
+            --lift-amount: calc(var(--lift) * var(--gap))
+        }
+
+        :where([data-sonner-toast]) :where([data-description]) {
+            font-weight: 400;
+            line-height: 1.4;
+            color: inherit
+        }
+
+        :where([data-sonner-toast]) :where([data-title]) {
+            font-weight: 500;
+            line-height: 1.5;
+            color: inherit
+        }
+
+        :where([data-sonner-toast]) :where([data-icon]) {
+            display: flex;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            justify-content: flex-start;
+            align-items: center;
+            flex-shrink: 0;
+            margin-left: var(--toast-icon-margin-start);
+            margin-right: var(--toast-icon-margin-end)
+        }
+
+        :where([data-sonner-toast][data-promise="true"]) :where([data-icon])>svg {
+            opacity: 0;
+            transform: scale(.8);
+            transform-origin: center;
+            animation: sonner-fade-in .3s ease forwards
+        }
+
+        :where([data-sonner-toast]) :where([data-icon])>* {
+            flex-shrink: 0
+        }
+
+        :where([data-sonner-toast]) :where([data-icon]) svg {
+            margin-left: var(--toast-svg-margin-start);
+            margin-right: var(--toast-svg-margin-end)
+        }
+
+        :where([data-sonner-toast]) :where([data-content]) {
+            display: flex;
+            flex-direction: column;
+            gap: 2px
+        }
+
+        [data-sonner-toast][data-styled=true] [data-button] {
+            border-radius: 4px;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: 24px;
+            font-size: 12px;
+            color: var(--normal-bg);
+            background: var(--normal-text);
+            margin-left: var(--toast-button-margin-start);
+            margin-right: var(--toast-button-margin-end);
+            border: none;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            transition: opacity .4s, box-shadow .2s
+        }
+
+        :where([data-sonner-toast]) :where([data-button]):focus-visible {
+            box-shadow: 0 0 0 2px #0006
+        }
+
+        :where([data-sonner-toast]) :where([data-button]):first-of-type {
+            margin-left: var(--toast-button-margin-start);
+            margin-right: var(--toast-button-margin-end)
+        }
+
+        :where([data-sonner-toast]) :where([data-cancel]) {
+            color: var(--normal-text);
+            background: rgba(0, 0, 0, .08)
+        }
+
+        :where([data-sonner-toast][data-theme="dark"]) :where([data-cancel]) {
+            background: rgba(255, 255, 255, .3)
+        }
+
+        :where([data-sonner-toast]) :where([data-close-button]) {
+            position: absolute;
+            left: var(--toast-close-button-start);
+            right: var(--toast-close-button-end);
+            top: 0;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            color: var(--gray12);
+            border: 1px solid var(--gray4);
+            transform: var(--toast-close-button-transform);
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            transition: opacity .1s, background .2s, border-color .2s
+        }
+
+        [data-sonner-toast] [data-close-button] {
+            background: var(--gray1)
+        }
+
+        :where([data-sonner-toast]) :where([data-close-button]):focus-visible {
+            box-shadow: 0 4px 12px #0000001a, 0 0 0 2px #0003
+        }
+
+        :where([data-sonner-toast]) :where([data-disabled="true"]) {
+            cursor: not-allowed
+        }
+
+        :where([data-sonner-toast]):hover :where([data-close-button]):hover {
+            background: var(--gray2);
+            border-color: var(--gray5)
+        }
+
+        :where([data-sonner-toast][data-swiping="true"]):before {
+            content: "";
+            position: absolute;
+            left: -50%;
+            right: -50%;
+            height: 100%;
+            z-index: -1
+        }
+
+        :where([data-sonner-toast][data-y-position="top"][data-swiping="true"]):before {
+            bottom: 50%;
+            transform: scaleY(3) translateY(50%)
+        }
+
+        :where([data-sonner-toast][data-y-position="bottom"][data-swiping="true"]):before {
+            top: 50%;
+            transform: scaleY(3) translateY(-50%)
+        }
+
+        :where([data-sonner-toast][data-swiping="false"][data-removed="true"]):before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            transform: scaleY(2)
+        }
+
+        :where([data-sonner-toast]):after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: calc(var(--gap) + 1px);
+            bottom: 100%;
+            width: 100%
+        }
+
+        :where([data-sonner-toast][data-mounted="true"]) {
+            --y: translateY(0);
+            opacity: 1
+        }
+
+        :where([data-sonner-toast][data-expanded="false"][data-front="false"]) {
+            --scale: var(--toasts-before) * .05 + 1;
+            --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));
+            height: var(--front-toast-height)
+        }
+
+        :where([data-sonner-toast])>* {
+            transition: opacity .4s
+        }
+
+        :where([data-sonner-toast][data-expanded="false"][data-front="false"][data-styled="true"])>* {
+            opacity: 0
+        }
+
+        :where([data-sonner-toast][data-visible="false"]) {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        :where([data-sonner-toast][data-mounted="true"][data-expanded="true"]) {
+            --y: translateY(calc(var(--lift) * var(--offset)));
+            height: var(--initial-height)
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="true"][data-swipe-out="false"]) {
+            --y: translateY(calc(var(--lift) * -100%));
+            opacity: 0
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="true"]) {
+            --y: translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));
+            opacity: 0
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="false"][data-swipe-out="false"][data-expanded="false"]) {
+            --y: translateY(40%);
+            opacity: 0;
+            transition: transform .5s, opacity .2s
+        }
+
+        :where([data-sonner-toast][data-removed="true"][data-front="false"]):before {
+            height: calc(var(--initial-height) + 20%)
+        }
+
+        [data-sonner-toast][data-swiping=true] {
+            transform: var(--y) translateY(var(--swipe-amount-y, 0px)) translate(var(--swipe-amount-x, 0px));
+            transition: none
+        }
+
+        [data-sonner-toast][data-swiped=true] {
+            user-select: none
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-y-position=bottom],
+        [data-sonner-toast][data-swipe-out=true][data-y-position=top] {
+            animation-duration: .2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=left] {
+            animation-name: swipe-out-left
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=right] {
+            animation-name: swipe-out-right
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=up] {
+            animation-name: swipe-out-up
+        }
+
+        [data-sonner-toast][data-swipe-out=true][data-swipe-direction=down] {
+            animation-name: swipe-out-down
+        }
+
+        @keyframes swipe-out-left {
+            0% {
+                transform: var(--y) translate(var(--swipe-amount-x));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translate(calc(var(--swipe-amount-x) - 100%));
+                opacity: 0
+            }
+        }
+
+        @keyframes swipe-out-right {
+            0% {
+                transform: var(--y) translate(var(--swipe-amount-x));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translate(calc(var(--swipe-amount-x) + 100%));
+                opacity: 0
+            }
+        }
+
+        @keyframes swipe-out-up {
+            0% {
+                transform: var(--y) translateY(var(--swipe-amount-y));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translateY(calc(var(--swipe-amount-y) - 100%));
+                opacity: 0
+            }
+        }
+
+        @keyframes swipe-out-down {
+            0% {
+                transform: var(--y) translateY(var(--swipe-amount-y));
+                opacity: 1
+            }
+
+            to {
+                transform: var(--y) translateY(calc(var(--swipe-amount-y) + 100%));
+                opacity: 0
+            }
+        }
+
+        @media (max-width: 600px) {
+            [data-sonner-toaster] {
+                position: fixed;
+                right: var(--mobile-offset-right);
+                left: var(--mobile-offset-left);
+                width: 100%
+            }
+
+            [data-sonner-toaster][dir=rtl] {
+                left: calc(var(--mobile-offset-left) * -1)
+            }
+
+            [data-sonner-toaster] [data-sonner-toast] {
+                left: 0;
+                right: 0;
+                width: calc(100% - var(--mobile-offset-left) * 2)
+            }
+
+            [data-sonner-toaster][data-x-position=left] {
+                left: var(--mobile-offset-left)
+            }
+
+            [data-sonner-toaster][data-y-position=bottom] {
+                bottom: var(--mobile-offset-bottom)
+            }
+
+            [data-sonner-toaster][data-y-position=top] {
+                top: var(--mobile-offset-top)
+            }
+
+            [data-sonner-toaster][data-x-position=center] {
+                left: var(--mobile-offset-left);
+                right: var(--mobile-offset-right);
+                transform: none
+            }
+        }
+
+        [data-sonner-toaster][data-theme=light] {
+            --normal-bg: #fff;
+            --normal-border: var(--gray4);
+            --normal-text: var(--gray12);
+            --success-bg: hsl(143, 85%, 96%);
+            --success-border: hsl(145, 92%, 91%);
+            --success-text: hsl(140, 100%, 27%);
+            --info-bg: hsl(208, 100%, 97%);
+            --info-border: hsl(221, 91%, 91%);
+            --info-text: hsl(210, 92%, 45%);
+            --warning-bg: hsl(49, 100%, 97%);
+            --warning-border: hsl(49, 91%, 91%);
+            --warning-text: hsl(31, 92%, 45%);
+            --error-bg: hsl(359, 100%, 97%);
+            --error-border: hsl(359, 100%, 94%);
+            --error-text: hsl(360, 100%, 45%)
+        }
+
+        [data-sonner-toaster][data-theme=light] [data-sonner-toast][data-invert=true] {
+            --normal-bg: #000;
+            --normal-border: hsl(0, 0%, 20%);
+            --normal-text: var(--gray1)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast][data-invert=true] {
+            --normal-bg: #fff;
+            --normal-border: var(--gray3);
+            --normal-text: var(--gray12)
+        }
+
+        [data-sonner-toaster][data-theme=dark] {
+            --normal-bg: #000;
+            --normal-bg-hover: hsl(0, 0%, 12%);
+            --normal-border: hsl(0, 0%, 20%);
+            --normal-border-hover: hsl(0, 0%, 25%);
+            --normal-text: var(--gray1);
+            --success-bg: hsl(150, 100%, 6%);
+            --success-border: hsl(147, 100%, 12%);
+            --success-text: hsl(150, 86%, 65%);
+            --info-bg: hsl(215, 100%, 6%);
+            --info-border: hsl(223, 100%, 12%);
+            --info-text: hsl(216, 87%, 65%);
+            --warning-bg: hsl(64, 100%, 6%);
+            --warning-border: hsl(60, 100%, 12%);
+            --warning-text: hsl(46, 87%, 65%);
+            --error-bg: hsl(358, 76%, 10%);
+            --error-border: hsl(357, 89%, 16%);
+            --error-text: hsl(358, 100%, 81%)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button] {
+            background: var(--normal-bg);
+            border-color: var(--normal-border);
+            color: var(--normal-text)
+        }
+
+        [data-sonner-toaster][data-theme=dark] [data-sonner-toast] [data-close-button]:hover {
+            background: var(--normal-bg-hover);
+            border-color: var(--normal-border-hover)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=success],
+        [data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button] {
+            background: var(--success-bg);
+            border-color: var(--success-border);
+            color: var(--success-text)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=info],
+        [data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button] {
+            background: var(--info-bg);
+            border-color: var(--info-border);
+            color: var(--info-text)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=warning],
+        [data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button] {
+            background: var(--warning-bg);
+            border-color: var(--warning-border);
+            color: var(--warning-text)
+        }
+
+        [data-rich-colors=true][data-sonner-toast][data-type=error],
+        [data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button] {
+            background: var(--error-bg);
+            border-color: var(--error-border);
+            color: var(--error-text)
+        }
+
+        .sonner-loading-wrapper {
+            --size: 16px;
+            height: var(--size);
+            width: var(--size);
+            position: absolute;
+            inset: 0;
+            z-index: 10
+        }
+
+        .sonner-loading-wrapper[data-visible=false] {
+            transform-origin: center;
+            animation: sonner-fade-out .2s ease forwards
+        }
+
+        .sonner-spinner {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            height: var(--size);
+            width: var(--size)
+        }
+
+        .sonner-loading-bar {
+            animation: sonner-spin 1.2s linear infinite;
+            background: var(--gray11);
+            border-radius: 6px;
+            height: 8%;
+            left: -10%;
+            position: absolute;
+            top: -3.9%;
+            width: 24%
+        }
+
+        .sonner-loading-bar:nth-child(1) {
+            animation-delay: -1.2s;
+            transform: rotate(.0001deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(2) {
+            animation-delay: -1.1s;
+            transform: rotate(30deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(3) {
+            animation-delay: -1s;
+            transform: rotate(60deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(4) {
+            animation-delay: -.9s;
+            transform: rotate(90deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(5) {
+            animation-delay: -.8s;
+            transform: rotate(120deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(6) {
+            animation-delay: -.7s;
+            transform: rotate(150deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(7) {
+            animation-delay: -.6s;
+            transform: rotate(180deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(8) {
+            animation-delay: -.5s;
+            transform: rotate(210deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(9) {
+            animation-delay: -.4s;
+            transform: rotate(240deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(10) {
+            animation-delay: -.3s;
+            transform: rotate(270deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(11) {
+            animation-delay: -.2s;
+            transform: rotate(300deg) translate(146%)
+        }
+
+        .sonner-loading-bar:nth-child(12) {
+            animation-delay: -.1s;
+            transform: rotate(330deg) translate(146%)
+        }
+
+        @keyframes sonner-fade-in {
+            0% {
+                opacity: 0;
+                transform: scale(.8)
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        @keyframes sonner-fade-out {
+            0% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(.8)
+            }
+        }
+
+        @keyframes sonner-spin {
+            0% {
+                opacity: 1
+            }
+
+            to {
+                opacity: .15
+            }
+        }
+
+        @media (prefers-reduced-motion) {
+
+            [data-sonner-toast],
+            [data-sonner-toast]>*,
+            .sonner-loading-bar {
+                transition: none !important;
+                animation: none !important
+            }
+        }
+
+        .sonner-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+            transition: opacity .2s, transform .2s
+        }
+
+        .sonner-loader[data-visible=false] {
+            opacity: 0;
+            transform: scale(.8) translate(-50%, -50%)
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+        }
+
+        @-moz-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -moz-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+
+            to {
+                opacity: 1;
+                -moz-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+        }
+
+        @-o-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -o-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+
+            to {
+                opacity: 1;
+                -o-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 10px);
+                -moz-transform: translate(-50%, 10px);
+                -o-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                -moz-transform: translate(-50%, 0);
+                -o-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+        }
+
+        @-webkit-keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+        }
+
+        @-moz-keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                -moz-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+
+            to {
+                opacity: 0;
+                -moz-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+        }
+
+        @-o-keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                -o-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+
+            to {
+                opacity: 0;
+                -o-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+        }
+
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                -webkit-transform: translate(-50%, 0);
+                -moz-transform: translate(-50%, 0);
+                -o-transform: translate(-50%, 0);
+                transform: translate(-50%, 0)
+            }
+
+            to {
+                opacity: 0;
+                -webkit-transform: translate(-50%, 10px);
+                -moz-transform: translate(-50%, 10px);
+                -o-transform: translate(-50%, 10px);
+                transform: translate(-50%, 10px)
+            }
+        }
+
+        .with-scroll-bars-hidden {
+            overflow: hidden !important;
+            padding-right: 0px !important;
+        }
+
+        body[data-scroll-locked] {
+            overflow: hidden !important;
+            overscroll-behavior: contain;
+            position: relative !important;
+            padding-left: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+            margin-left: 0;
+            margin-top: 0;
+            margin-right: 0px !important;
+        }
+
+        .right-scroll-bar-position {
+            right: 0px !important;
+        }
+
+        .width-before-scroll-bar {
+            margin-right: 0px !important;
+        }
+
+        .right-scroll-bar-position .right-scroll-bar-position {
+            right: 0 !important;
+        }
+
+        .width-before-scroll-bar .width-before-scroll-bar {
+            margin-right: 0 !important;
+        }
+
+        body[data-scroll-locked] {
+            --removed-body-scroll-bar-size: 0px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+
+        @keyframes w3m-shake {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            20% {
+                transform: scale(1) rotate(-1deg);
+            }
+
+            40% {
+                transform: scale(1) rotate(1.5deg);
+            }
+
+            60% {
+                transform: scale(1) rotate(-1.5deg);
+            }
+
+            80% {
+                transform: scale(1) rotate(1deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes w3m-iframe-fade-out {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes w3m-iframe-zoom-in {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes w3m-iframe-zoom-in-mobile {
+            0% {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        :root {
+            --w3m-modal-width: 360px;
+            --w3m-color-mix-strength: 0%;
+            --w3m-font-family: Inter, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+            ;
+            --w3m-font-size-master: 10px;
+            --w3m-border-radius-master: 4px;
+            --w3m-z-index: 999;
+            --wui-font-family: var(--w3m-font-family);
+            --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+            --wui-font-size-micro: var(--w3m-font-size-master);
+            --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+            --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+            --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+            --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+            --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+            --wui-font-size-title-6: calc(var(--w3m-font-size-master) * 2.2);
+            --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+            --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+            --wui-border-radius-5xs: var(--w3m-border-radius-master);
+            --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+            --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+            --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+            --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+            --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+            --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+            --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+            --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+            --wui-font-weight-light: 400;
+            --wui-font-weight-regular: 500;
+            --wui-font-weight-medium: 600;
+            --wui-font-weight-bold: 700;
+            --wui-letter-spacing-2xl: -1.6px;
+            --wui-letter-spacing-medium-title: -0.96px;
+            --wui-letter-spacing-title-6: -0.88px;
+            --wui-letter-spacing-large: -0.8px;
+            --wui-letter-spacing-medium: -0.72px;
+            --wui-letter-spacing-paragraph: -0.64px;
+            --wui-letter-spacing-small: -0.56px;
+            --wui-letter-spacing-tiny: -0.48px;
+            --wui-letter-spacing-micro: -0.2px;
+            --wui-letter-spacing-mini: -0.16px;
+            --wui-spacing-0: 0px;
+            --wui-spacing-4xs: 2px;
+            --wui-spacing-3xs: 4px;
+            --wui-spacing-xxs: 6px;
+            --wui-spacing-2xs: 7px;
+            --wui-spacing-xs: 8px;
+            --wui-spacing-1xs: 10px;
+            --wui-spacing-s: 12px;
+            --wui-spacing-m: 14px;
+            --wui-spacing-l: 16px;
+            --wui-spacing-2l: 18px;
+            --wui-spacing-xl: 20px;
+            --wui-spacing-xxl: 24px;
+            --wui-spacing-2xl: 32px;
+            --wui-spacing-3xl: 40px;
+            --wui-spacing-4xl: 90px;
+            --wui-spacing-5xl: 95px;
+            --wui-icon-box-size-xxs: 14px;
+            --wui-icon-box-size-xs: 20px;
+            --wui-icon-box-size-sm: 24px;
+            --wui-icon-box-size-md: 32px;
+            --wui-icon-box-size-mdl: 36px;
+            --wui-icon-box-size-lg: 40px;
+            --wui-icon-box-size-2lg: 48px;
+            --wui-icon-box-size-xl: 64px;
+            --wui-icon-size-inherit: inherit;
+            --wui-icon-size-xxs: 10px;
+            --wui-icon-size-xs: 12px;
+            --wui-icon-size-sm: 14px;
+            --wui-icon-size-md: 16px;
+            --wui-icon-size-mdl: 18px;
+            --wui-icon-size-lg: 20px;
+            --wui-icon-size-xl: 24px;
+            --wui-icon-size-xxl: 28px;
+            --wui-wallet-image-size-inherit: inherit;
+            --wui-wallet-image-size-sm: 40px;
+            --wui-wallet-image-size-md: 56px;
+            --wui-wallet-image-size-lg: 80px;
+            --wui-visual-size-size-inherit: inherit;
+            --wui-visual-size-sm: 40px;
+            --wui-visual-size-md: 55px;
+            --wui-visual-size-lg: 80px;
+            --wui-box-size-md: 100px;
+            --wui-box-size-lg: 120px;
+            --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+            --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+            --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+            --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+            --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+            --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+            --wui-duration-lg: 200ms;
+            --wui-duration-md: 125ms;
+            --wui-duration-sm: 75ms;
+            --wui-path-network-sm: path('M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z'
+                );
+            --wui-path-network-md: path('M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+                );
+            --wui-path-network-lg: path('M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+                );
+            --wui-width-network-sm: 36px;
+            --wui-width-network-md: 48px;
+            --wui-width-network-lg: 86px;
+            --wui-height-network-sm: 40px;
+            --wui-height-network-md: 54px;
+            --wui-height-network-lg: 96px;
+            --wui-icon-size-network-xs: 12px;
+            --wui-icon-size-network-sm: 16px;
+            --wui-icon-size-network-md: 24px;
+            --wui-icon-size-network-lg: 42px;
+            --wui-color-inherit: inherit;
+            --wui-color-inverse-100: #fff;
+            --wui-color-inverse-000: #000;
+            --wui-cover: rgba(20, 20, 20, 0.8);
+            --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+            --wui-color-accent-100: var(--wui-color-accent-base-100);
+            --wui-color-accent-090: var(--wui-color-accent-base-090);
+            --wui-color-accent-080: var(--wui-color-accent-base-080);
+            --wui-color-success-100: var(--wui-color-success-base-100);
+            --wui-color-success-125: var(--wui-color-success-base-125);
+            --wui-color-warning-100: var(--wui-color-warning-base-100);
+            --wui-color-error-100: var(--wui-color-error-base-100);
+            --wui-color-error-125: var(--wui-color-error-base-125);
+            --wui-color-blue-100: var(--wui-color-blue-base-100);
+            --wui-color-blue-90: var(--wui-color-blue-base-90);
+            --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+            --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+            --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+            --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+            --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-100);
+            --wui-avatar-border: var(--wui-avatar-border-base);
+            --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+            --wui-wallet-button-bg: var(--wui-wallet-button-bg-base);
+            --wui-box-shadow-blue: var(--wui-color-accent-glass-020);
+        }
+
+        @supports (background: color-mix(in srgb, white 50%, black)) {
+            :root {
+                --wui-color-modal-bg: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-modal-bg-base));
+                --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 20%, transparent);
+                --wui-color-accent-100: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 100%,
+                        transparent);
+                --wui-color-accent-090: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 90%,
+                        transparent);
+                --wui-color-accent-080: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 80%,
+                        transparent);
+                --wui-color-accent-glass-090: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 90%,
+                        transparent);
+                --wui-color-accent-glass-080: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 80%,
+                        transparent);
+                --wui-color-accent-glass-020: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 20%,
+                        transparent);
+                --wui-color-accent-glass-015: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 15%,
+                        transparent);
+                --wui-color-accent-glass-010: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 10%,
+                        transparent);
+                --wui-color-accent-glass-005: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 5%,
+                        transparent);
+                --wui-color-accent-002: color-mix(in srgb,
+                        var(--wui-color-accent-base-100) 2%,
+                        transparent);
+                --wui-color-fg-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-100));
+                --wui-color-fg-125: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-125));
+                --wui-color-fg-150: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-150));
+                --wui-color-fg-175: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-175));
+                --wui-color-fg-200: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-200));
+                --wui-color-fg-225: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-225));
+                --wui-color-fg-250: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-250));
+                --wui-color-fg-275: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-275));
+                --wui-color-fg-300: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-300));
+                --wui-color-fg-325: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-325));
+                --wui-color-fg-350: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-fg-350));
+                --wui-color-bg-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-100));
+                --wui-color-bg-125: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-125));
+                --wui-color-bg-150: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-150));
+                --wui-color-bg-175: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-175));
+                --wui-color-bg-200: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-200));
+                --wui-color-bg-225: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-225));
+                --wui-color-bg-250: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-250));
+                --wui-color-bg-275: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-275));
+                --wui-color-bg-300: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-300));
+                --wui-color-bg-325: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-325));
+                --wui-color-bg-350: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-bg-350));
+                --wui-color-success-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-success-base-100));
+                --wui-color-success-125: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-success-base-125));
+                --wui-color-warning-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-warning-base-100));
+                --wui-color-error-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-error-base-100));
+                --wui-color-blue-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-blue-base-100));
+                --wui-color-blue-90: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-blue-base-90));
+                --wui-color-error-125: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-color-error-base-125));
+                --wui-icon-box-bg-error-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-icon-box-bg-error-base-100));
+                --wui-icon-box-bg-accent-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-icon-box-bg-blue-base-100));
+                --wui-icon-box-bg-success-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-icon-box-bg-success-base-100));
+                --wui-icon-box-bg-inverse-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-icon-box-bg-inverse-base-100));
+                --wui-all-wallets-bg-100: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-all-wallets-bg-100));
+                --wui-avatar-border: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-avatar-border-base));
+                --wui-thumbnail-border: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-thumbnail-border-base));
+                --wui-wallet-button-bg: color-mix(in srgb,
+                        var(--w3m-color-mix) var(--w3m-color-mix-strength),
+                        var(--wui-wallet-button-bg-base));
+            }
+        }
+
+        :root {
+            --w3m-color-mix: #000;
+            --w3m-accent: hsla(231, 100%, 70%, 1);
+            --w3m-default: #000;
+            --wui-color-modal-bg-base: #fff;
+            --wui-color-accent-base-100: var(--w3m-accent);
+            --wui-color-blueberry-100: hsla(231, 100%, 70%, 1);
+            --wui-color-blueberry-090: hsla(231, 97%, 72%, 1);
+            --wui-color-blueberry-080: hsla(231, 92%, 74%, 1);
+            --wui-color-fg-100: #141414;
+            --wui-color-fg-125: #2d3131;
+            --wui-color-fg-150: #474d4d;
+            --wui-color-fg-175: #636d6d;
+            --wui-color-fg-200: #798686;
+            --wui-color-fg-225: #828f8f;
+            --wui-color-fg-250: #8b9797;
+            --wui-color-fg-275: #95a0a0;
+            --wui-color-fg-300: #9ea9a9;
+            --wui-color-fg-325: #9a9a9a;
+            --wui-color-fg-350: #d0d0d0;
+            --wui-color-bg-100: #ffffff;
+            --wui-color-bg-125: #f5fafa;
+            --wui-color-bg-150: #f3f8f8;
+            --wui-color-bg-175: #eef4f4;
+            --wui-color-bg-200: #eaf1f1;
+            --wui-color-bg-225: #e5eded;
+            --wui-color-bg-250: #e1e9e9;
+            --wui-color-bg-275: #dce7e7;
+            --wui-color-bg-300: #d8e3e3;
+            --wui-color-bg-325: #f3f3f3;
+            --wui-color-bg-350: #202020;
+            --wui-color-success-base-100: #26b562;
+            --wui-color-success-base-125: #30a46b;
+            --wui-color-warning-base-100: #f3a13f;
+            --wui-color-error-base-100: #f05142;
+            --wui-color-error-base-125: #df4a34;
+            --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+            --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+            --wui-color-success-glass-001: rgba(38, 181, 98, 0.01);
+            --wui-color-success-glass-002: rgba(38, 181, 98, 0.02);
+            --wui-color-success-glass-005: rgba(38, 181, 98, 0.05);
+            --wui-color-success-glass-010: rgba(38, 181, 98, 0.1);
+            --wui-color-success-glass-015: rgba(38, 181, 98, 0.15);
+            --wui-color-success-glass-020: rgba(38, 181, 98, 0.2);
+            --wui-color-success-glass-025: rgba(38, 181, 98, 0.25);
+            --wui-color-success-glass-030: rgba(38, 181, 98, 0.3);
+            --wui-color-success-glass-060: rgba(38, 181, 98, 0.6);
+            --wui-color-success-glass-080: rgba(38, 181, 98, 0.8);
+            --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+            --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+            --wui-color-error-glass-001: rgba(240, 81, 66, 0.01);
+            --wui-color-error-glass-002: rgba(240, 81, 66, 0.02);
+            --wui-color-error-glass-005: rgba(240, 81, 66, 0.05);
+            --wui-color-error-glass-010: rgba(240, 81, 66, 0.1);
+            --wui-color-error-glass-015: rgba(240, 81, 66, 0.15);
+            --wui-color-error-glass-020: rgba(240, 81, 66, 0.2);
+            --wui-color-error-glass-025: rgba(240, 81, 66, 0.25);
+            --wui-color-error-glass-030: rgba(240, 81, 66, 0.3);
+            --wui-color-error-glass-060: rgba(240, 81, 66, 0.6);
+            --wui-color-error-glass-080: rgba(240, 81, 66, 0.8);
+            --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+            --wui-icon-box-bg-error-base-100: #f4dfdd;
+            --wui-icon-box-bg-blue-base-100: #d9ecfb;
+            --wui-icon-box-bg-success-base-100: #daf0e4;
+            --wui-icon-box-bg-inverse-base-100: #dcecfc;
+            --wui-all-wallets-bg-100: #e8f1fa;
+            --wui-avatar-border-base: #f3f4f4;
+            --wui-thumbnail-border-base: #eaefef;
+            --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+            --wui-color-gray-glass-001: rgba(0, 0, 0, 0.01);
+            --wui-color-gray-glass-002: rgba(0, 0, 0, 0.02);
+            --wui-color-gray-glass-005: rgba(0, 0, 0, 0.05);
+            --wui-color-gray-glass-010: rgba(0, 0, 0, 0.1);
+            --wui-color-gray-glass-015: rgba(0, 0, 0, 0.15);
+            --wui-color-gray-glass-020: rgba(0, 0, 0, 0.2);
+            --wui-color-gray-glass-025: rgba(0, 0, 0, 0.25);
+            --wui-color-gray-glass-030: rgba(0, 0, 0, 0.3);
+            --wui-color-gray-glass-060: rgba(0, 0, 0, 0.6);
+            --wui-color-gray-glass-080: rgba(0, 0, 0, 0.8);
+            --wui-color-gray-glass-090: rgba(0, 0, 0, 0.9);
+            --wui-color-dark-glass-100: rgba(233, 233, 233, 1);
+            --w3m-card-embedded-shadow-color: rgb(224 225 233 / 25%);
+        }
+
+        :root {
+            --w3m-color-mix: #fff;
+            --w3m-accent: hsla(230, 100%, 67%, 1);
+            --w3m-default: #fff;
+            --wui-color-modal-bg-base: #121313;
+            --wui-color-accent-base-100: var(--w3m-accent);
+            --wui-color-blueberry-100: hsla(230, 100%, 67%, 1);
+            --wui-color-blueberry-090: hsla(231, 76%, 61%, 1);
+            --wui-color-blueberry-080: hsla(230, 59%, 55%, 1);
+            --wui-color-blueberry-050: hsla(231, 100%, 70%, 0.1);
+            --wui-color-fg-100: #e4e7e7;
+            --wui-color-fg-125: #d0d5d5;
+            --wui-color-fg-150: #a8b1b1;
+            --wui-color-fg-175: #a8b0b0;
+            --wui-color-fg-200: #949e9e;
+            --wui-color-fg-225: #868f8f;
+            --wui-color-fg-250: #788080;
+            --wui-color-fg-275: #788181;
+            --wui-color-fg-300: #6e7777;
+            --wui-color-fg-325: #9a9a9a;
+            --wui-color-fg-350: #363636;
+            --wui-color-bg-100: #141414;
+            --wui-color-bg-125: #191a1a;
+            --wui-color-bg-150: #1e1f1f;
+            --wui-color-bg-175: #222525;
+            --wui-color-bg-200: #272a2a;
+            --wui-color-bg-225: #2c3030;
+            --wui-color-bg-250: #313535;
+            --wui-color-bg-275: #363b3b;
+            --wui-color-bg-300: #3b4040;
+            --wui-color-bg-325: #252525;
+            --wui-color-bg-350: #ffffff;
+            --wui-color-success-base-100: #26d962;
+            --wui-color-success-base-125: #30a46b;
+            --wui-color-warning-base-100: #f3a13f;
+            --wui-color-error-base-100: #f25a67;
+            --wui-color-error-base-125: #df4a34;
+            --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+            --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+            --wui-color-success-glass-001: rgba(38, 217, 98, 0.01);
+            --wui-color-success-glass-002: rgba(38, 217, 98, 0.02);
+            --wui-color-success-glass-005: rgba(38, 217, 98, 0.05);
+            --wui-color-success-glass-010: rgba(38, 217, 98, 0.1);
+            --wui-color-success-glass-015: rgba(38, 217, 98, 0.15);
+            --wui-color-success-glass-020: rgba(38, 217, 98, 0.2);
+            --wui-color-success-glass-025: rgba(38, 217, 98, 0.25);
+            --wui-color-success-glass-030: rgba(38, 217, 98, 0.3);
+            --wui-color-success-glass-060: rgba(38, 217, 98, 0.6);
+            --wui-color-success-glass-080: rgba(38, 217, 98, 0.8);
+            --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+            --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+            --wui-color-error-glass-001: rgba(242, 90, 103, 0.01);
+            --wui-color-error-glass-002: rgba(242, 90, 103, 0.02);
+            --wui-color-error-glass-005: rgba(242, 90, 103, 0.05);
+            --wui-color-error-glass-010: rgba(242, 90, 103, 0.1);
+            --wui-color-error-glass-015: rgba(242, 90, 103, 0.15);
+            --wui-color-error-glass-020: rgba(242, 90, 103, 0.2);
+            --wui-color-error-glass-025: rgba(242, 90, 103, 0.25);
+            --wui-color-error-glass-030: rgba(242, 90, 103, 0.3);
+            --wui-color-error-glass-060: rgba(242, 90, 103, 0.6);
+            --wui-color-error-glass-080: rgba(242, 90, 103, 0.8);
+            --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+            --wui-color-gray-glass-001: rgba(255, 255, 255, 0.01);
+            --wui-color-gray-glass-002: rgba(255, 255, 255, 0.02);
+            --wui-color-gray-glass-005: rgba(255, 255, 255, 0.05);
+            --wui-color-gray-glass-010: rgba(255, 255, 255, 0.1);
+            --wui-color-gray-glass-015: rgba(255, 255, 255, 0.15);
+            --wui-color-gray-glass-020: rgba(255, 255, 255, 0.2);
+            --wui-color-gray-glass-025: rgba(255, 255, 255, 0.25);
+            --wui-color-gray-glass-030: rgba(255, 255, 255, 0.3);
+            --wui-color-gray-glass-060: rgba(255, 255, 255, 0.6);
+            --wui-color-gray-glass-080: rgba(255, 255, 255, 0.8);
+            --wui-color-gray-glass-090: rgba(255, 255, 255, 0.9);
+            --wui-color-dark-glass-100: rgba(42, 42, 42, 1);
+            --wui-icon-box-bg-error-base-100: #3c2426;
+            --wui-icon-box-bg-blue-base-100: #20303f;
+            --wui-icon-box-bg-success-base-100: #1f3a28;
+            --wui-icon-box-bg-inverse-base-100: #243240;
+            --wui-all-wallets-bg-100: #222b35;
+            --wui-avatar-border-base: #252525;
+            --wui-thumbnail-border-base: #252525;
+            --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+            --w3m-card-embedded-shadow-color: rgb(17 17 18 / 25%);
+        }
+
+        .hero_lottie {
+            position: fixed;
+            top: 65px;
+            left: 0;
+            width: 100vw;
+            height: 95vh;
+            z-index: -1;
+            pointer-events: none;
+            /* Make sure it doesn't block clicks */
+        }
+
+        .jsx-1ea2276b31877ada {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media screen and (max-width:600px) {
+            .h-\[126px\] {
+                height: 0px;
+            }
+
+            .hero_lottie {
+                width: 100vw;
+                height: 100vh;
+                object-fit: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="fixed inset-0 z-[48] transition-opacity duration-500"
+    style="opacity: 1; pointer-events: auto; background: #fbfaf9;">
+    <div class="w-embed">
+        <video video-gsap="" class="cta-graphic-video hero_lottie" poster="assets/images/Circuit.html" muted=""
+            autoplay="" loop="" playsinline="">
+            <source src="assets/videos/Circuit.webm" type="video/webm">
+            <source src="assets/videos/Circuit.html" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+    <div id="chatbot-container">
+        <div id="chatbot-header">
+            <img src="assets/images/logo-light.png" alt="Logo" />
+            <i id="chatbot-close-btn" class="fas fa-times"></i>
+        </div>
+        <div id="chatbot-messages">
+            <div class="bot-message">👋 Hello! I'm here to help you with Circle Layer. Ask away!</div>
+        </div>
+        <div id="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <button id="chatbot-toggle-btn" class="ask-ai-btn btn-3d moveGradient">
+        <svg width="35px" height="25px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd" stroke-linecap="round">
+                <g transform="translate(1.000000, 3.000000)" class="sparkle-svg" stroke-width="1.5">
+                    <g fill-rule="nonzero" stroke-linejoin="round" id="sparkle1">
+                        <path
+                            d="M13.9848406,2.82653836 C14.0077416,2.95656049 14.0556273,3.19592254 14.1277878,3.50702129 C14.2480956,4.02569254 14.3913202,4.54347537 14.5552498,5.02057272 C14.8206315,5.79293381 15.1142444,6.3693642 15.3724401,6.62755989 C15.6306358,6.88575557 16.2070662,7.17936854 16.9794273,7.44475016 C17.4565246,7.60867979 17.9743075,7.75190442 18.4929787,7.87221216 C18.8040775,7.94437268 19.0434395,7.99225836 19.1734616,8.01515937 L24.996519,9.0407843 L19.1600498,9.98710895 C19.0304332,10.008125 18.7914961,10.0526796 18.4808698,10.1206787 C17.9630114,10.2340431 17.4460743,10.3706831 16.9699496,10.5289708 C16.2009111,10.7846378 15.6277244,11.0718225 15.3724401,11.3271068 C15.1144932,11.5850537 14.8194538,12.1703216 14.5532378,12.9558962 C14.3899894,13.4376246 14.2473907,13.96033 14.1276136,14.4839205 C14.0557674,14.7979872 14.0080792,15.0396934 13.985247,15.1711387 L12.9592002,21.0780995 L12.0125444,15.1578967 C11.9915887,15.0268441 11.9472161,14.7855494 11.8795137,14.4719405 C11.7666502,13.9491384 11.630613,13.4272535 11.4729928,12.9464701 C11.2165332,12.1642 10.9279354,11.582149 10.6728932,11.3271068 C10.417851,11.0720646 9.83580004,10.7834668 9.05352991,10.5270072 C8.57274646,10.369387 8.05086156,10.2333498 7.5280595,10.1204863 C7.2144506,10.0527839 6.97315585,10.0084113 6.84210328,9.98745563 L0.921900456,9.04079982 L6.82886133,8.01475305 C6.96030663,7.99192083 7.20201285,7.94423259 7.51607955,7.87238637 C8.03966996,7.75260927 8.56237541,7.6100106 9.04410383,7.4467622 C9.82967843,7.18054624 10.4149463,6.88550677 10.6728932,6.62755989 C10.9281775,6.37227561 11.2153622,5.7990889 11.4710292,5.0300504 C11.6293169,4.55392569 11.7659569,4.03698862 11.8793213,3.51913015 C11.9473204,3.20850395 11.991875,2.96956679 12.0128911,2.83995024 L12.9592157,-2.99651904 L13.9848406,2.82653836 Z">
+                        </path>
+                    </g>
+
+                    <g fill-rule="nonzero" id="sparkle2">
+                        <path d="M3,2 C4,2 5,1 5,0"></path>
+                        <path d="M5,2 C6,2 7,1 7,0"
+                            transform="translate(6.000000, 1.000000) scale(-1, 1) translate(-6.000000, -1.000000) ">
+                        </path>
+                        <path d="M5,4 C6,4 7,3 7,2"
+                            transform="translate(6.000000, 3.000000) scale(-1, -1) translate(-6.000000, -3.000000) ">
+                        </path>
+                        <path d="M3,4 C4,4 5,3 5,2"
+                            transform="translate(4.000000, 3.000000) scale(1, -1) translate(-4.000000, -3.000000) ">
+                        </path>
+                    </g>
+
+                    <g fill-rule="nonzero" id="sparkle3">
+                        <path d="M3,16 C4,16 5,15 5,14"></path>
+                        <path d="M5,16 C6,16 7,15 7,14"
+                            transform="translate(6.000000, 15.000000) scale(-1, 1) translate(-6.000000, -15.000000) ">
+                        </path>
+                        <path d="M5,18 C6,18 7,17 7,16"
+                            transform="translate(6.000000, 17.000000) scale(-1, -1) translate(-6.000000, -17.000000) ">
+                        </path>
+                        <path d="M3,18 C4,18 5,17 5,16"
+                            transform="translate(4.000000, 17.000000) scale(1, -1) translate(-4.000000, -17.000000) ">
+                        </path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        Ask AI</button>
+
+    <header class="navbar_wrap">
+        <div class="navbar_container">
+            <!-- Logo -->
+            <a href="index.html" class="w-nav-brand navbar_logo">
+                <img src="assets/images/logo-dark.png" alt="Circle Layer Logo" class="navbar_logo-image" />
+            </a>
+
+            <!-- Hamburger (Mobile) -->
+            <div class="menu-button">
+                <div class="menu-icon"><span class="fas fa-bars" style="color:#222;"></span></div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="navbar_links-container" id="navbarMenu">
+                <a href="index.html" class="basic_link">Home</a>
+                <a href="ecosystem.html" class="basic_link">Ecosystem</a>
+                <a href="technology.html" class="basic_link">Technology</a>
+                <a href="developers.html" class="basic_link">Developers</a>
+                <a href="hackathon.html" class="basic_link">Hackathon</a>
+                <a href="https://faucet.circlelayer.com/" class="basic_link" target="_blank">Faucet</a>
+ <div class="basic_link subMenu">
+   <a href="#" class="btn-3d current-active moveGradient arrow-next">Trade <img src="assets/images/arrow-next.png" style="width:15px;"></a>
+   <ul class="subMenu_list">
+     
+      <li><a href="https://etherscan.io/token/0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57" target="_blank" class="btn-3d current-active moveGradient"><img src="assets/images/brand-2.png" style="width: 20px;margin-right:10px;"> Etherscan</a></li>
+      
+      <li><a href="https://app.uniswap.org/swap?inputCurrency=ETH&amp;outputCurrency=0x7b5d6a651b5ea2049489123c5959b3d3cdfeee57&amp;exactField=output&amp;chain=mainnet" target="_blank" class="btn-3d current-active moveGradient"><img src="assets/images/brand-3.png" style="    width: 20px;margin-right:10px;"> Uniswap</a></li>
+      
+      <li><a href="https://dexscreener.com/ethereum/0xbef196ef984c4fda4d1dca40801b3173aec2adac" target="_blank" class="btn-3d current-active moveGradient"><img src="assets/images/brand-4.png" style="width: 20px;margin-right:10px;"> Dexscreener</a></li>
+      
+      <li><a href="https://www.dextools.io/app/en/ether/pair-explorer/0xbef196ef984c4fda4d1dca40801b3173aec2adac" target="_blank" class="btn-3d current-active moveGradient"><img src="assets/images/brand-1.png" style="width: 20px; margin-right:10px;"> DexTools</a></li>
+   </ul>
+</div>
+
+              <!-- CTA Button (for mobile) -->
+          <div class="navbar_cta-mobile">
+            <a href="https://docs.circlelayer.com/" class="btn-3d current-active moveGradient" target="_blank">
+              Docs
+            </a>
+            <a href="https://explorer-testnet.circlelayer.com/" class="btn-3d current-active moveGradient"
+              target="_blank">
+              Explorer
+            </a>
+            <a href="https://nodes.circlelayer.com/" class="btn-3d current-active moveGradient"
+              target="_blank">
+              Nodes
+            </a>
+          </div>
+        </nav>
+
+        <!-- CTA Button (for desktop) -->
+        <div class="navbar_cta">
+          <a href="https://docs.circlelayer.com/" class="btn-3d current-active moveGradient" target="_blank">
+            Docs
+          </a>
+          <a href="https://explorer-testnet.circlelayer.com/" class="btn-3d current-active moveGradient"
+            target="_blank">
+            Explorer
+          </a>
+          <a href="https://nodes.circlelayer.com/" class="btn-3d current-active moveGradient"
+            target="_blank">
+            Nodes
+          </a>
+        </div>
+        </div>
+    </header>
+    <a href="https://testnet.circlelayer.com/" class="header-news">
+        Circle Layer Testnet is Live <span class="eyebrow_label big-eyebrow_label  eyebrow_badge big-eyebrow-badge"
+            style="margin:0px 10px;">Testnet</span>
+    </a>
+    <div class="jsx-1ea2276b31877ada dialog-container flex flex-col items-center px-4 md:px-8 text-center min-w-0 h-full max-h-[100dvh] overflow-y-auto cta-card-container u-hflex-center-center"
+        style="z-index: 1;background:transparent;">
+        <div class="jsx-1ea2276b31877ada flex flex-col items-center w-full min-w-0">
+            <h2 id="radix-:r1:" class="tracking-tight u-text-h3 font-medium text-white mb-4"><span style="     background-image: linear-gradient(90deg, #41D1D3, #4F8FFF);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;">Add
+                    Circle Layer Testnet</span>
+            </h2>
+            <p class="text-gray-900 text-sm md:text-base mb-6 max-w-[60ch]">Use a wallet with native testnet support
+                or manually add testnet.
+            </p>
+            <div class="w-full max-w-[624px] md:max-w-[780px] mx-auto mb-8 place-items-stretch">
+                <div
+                    class="relative rounded-[24px] p-[1px] wallet-card-container overflow-hidden h-full max-w-[300px] md:max-w-[360px] w-full mx-auto">
+                    <div
+                        class="absolute inset-0 rounded-[24px] bg-gradient-to-b from-[#FFFFFF] to-[#1111111F] opacity-12">
+                    </div>
+
+                    <div class="relative rounded-[24px] bg-gradient-to-b flex flex-col items-start p-4 w-full h-full"
+                        style="background-image: linear-gradient(90deg, #41d1d3c4, #4f8fffc4);">
+                        <div class="inset-wallet-content overflow-hidden h-full flex flex-col items-start p-3 rounded-xl bg-gradient-to-b  shadow-[inset_0px_4px_4px_0px_rgba(0,0,0,0.50)] w-full"
+                            style="background-image: linear-gradient(-90deg, #f9f9f999, #f9f9f999);">
+                            <div class="text-xs mb-2 text-gray-900">Let's get started</div>
+
+                            <h2 class="text-xl text-gray-900 font-normal mb-2 text-left">Add Testnet &amp; Get tokens
+                            </h2>
+                            <p class="text-neutral-600 text-sm md:text-base md:mt-1 mb-4 text-left text-gray-900">If
+                                you're new
+                                here, add testnet
+                                to your wallet and get tokens from the Faucet page.
+                            </p>
+                            <div class="flex-1 w-full">
+                                <div
+                                    class="right-card-lighting absolute w-[240px] h-[240px] -top-[90px] left-1/2 -translate-x-1/2 md:left-[-33px] md:translate-x-0 bg-white/[0.03] md:bg-white/[0.08] blur-[60px] pointer-events-none z-[1]">
+                                </div>
+
+                                <div
+                                    class="manual-network-image relative w-full h-[126px] opacity-0 animate-slide-up-fade-in">
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <a target="_blank" class="btn-3d w-full" tabindex="-1" style="margin-top: 20px;"
+                            href="https://faucet.circlelayer.com/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em" viewBox="0 0 20 20"
+                                fill="#41D1D3">
+                                <path
+                                    d="M10.8335 8.3335H16.6668L9.16683 19.1668V11.6668H3.3335L10.8335 0.833496V8.3335Z"
+                                    fill="white"></path>
+                            </svg> Go to Faucet</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="jsx-1ea2276b31877ada modal-footer flex flex-col items-center gap-4">
+
+                <div class="jsx-1ea2276b31877ada flex gap-4">
+                    <a href="https://explorer-testnet.circlelayer.com/" class="btn-3d">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M8.38994 10.4284L3.23994 11.5268C3.04004 11.5701 2.8311 11.5331 2.65831 11.4236C2.48552 11.3141 2.36277 11.141 2.31661 10.9418L1.86911 9.15009C1.8165 8.93423 1.84638 8.70649 1.95289 8.5115C2.0594 8.31651 2.23488 8.16831 2.44494 8.09593L13.6983 4.39593M11.3024 9.80676L14.9124 9.03676M13.3358 17.5176L10.7483 12.3426M5.13411 7.21176L6.06244 10.9251M6.66911 17.5176L9.25661 12.3426M13.7399 4.96759C13.6328 4.53883 13.7004 4.08507 13.9278 3.70611C14.1551 3.32715 14.5237 3.05401 14.9524 2.94676L15.8608 2.72009C16.075 2.66664 16.3018 2.70043 16.4911 2.81402C16.6805 2.92761 16.8171 3.11173 16.8708 3.32593L18.1333 8.37593C18.187 8.59031 18.1533 8.81724 18.0397 9.00681C17.9261 9.19638 17.7418 9.33305 17.5274 9.38676L16.6191 9.61343C16.1903 9.72055 15.7366 9.653 15.3576 9.42562C14.9787 9.19824 14.7055 8.82966 14.5983 8.40093L13.7399 4.96759ZM11.6691 10.8509C11.6691 11.7714 10.9229 12.5176 10.0024 12.5176C9.08197 12.5176 8.33578 11.7714 8.33578 10.8509C8.33578 9.93045 9.08197 9.18426 10.0024 9.18426C10.9229 9.18426 11.6691 9.93045 11.6691 10.8509Z"
+                                stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg> Explorer</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"0916796bb98e431985964888df9cdd43","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+
+<!-- Mirrored from circlelayer.com/testnet by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Jul 2025 20:54:54 GMT -->
+</html>

@@ -1,0 +1,24 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 26 Jul 2025 17:54:26 at https://circlelayer.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "pt_BR, en, *" https://circlelayer.com/ -O1 "C:\Meus Sites\Singularity" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:54:51	Error: 	"Not Found" (404) at link https://circlelayer.com/transparent (from https://circlelayer.com/)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/cdn-cgi/l/email-protection (from https://circlelayer.com/ecosystem)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Orbit Triangle.jpg (from https://circlelayer.com/technology)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Orbit Triangle.mp4 (from https://circlelayer.com/technology)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Circle Layer.webp (from https://circlelayer.com/technology)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Circle Layer.mp4 (from https://circlelayer.com/technology)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/images/Circle Layer.webp (from https://circlelayer.com/technology)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Cube glass.mp4 (from https://circlelayer.com/developers)
+17:54:52	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Unchained.mp4 (from https://circlelayer.com/developers)
+17:54:53	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/TPS Flow.jpg (from https://circlelayer.com/hackathon)
+17:54:53	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/TPS Flow.mp4 (from https://circlelayer.com/hackathon)
+17:54:54	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/images/Circuit.webp (from https://circlelayer.com/testnet)
+17:54:54	Error: 	"Not Found" (404) at link https://circlelayer.com/assets/videos/Circuit.mp4 (from https://circlelayer.com/testnet)
+
+HTTrack Website Copier/3.49-2 mirror complete in 28 seconds : 99 links scanned, 85 files written (39644542 bytes overall) [35311516 bytes received at 1261125 bytes/sec], 5916493 bytes transferred using HTTP compression in 58 files, ratio 24%, 5.5 requests per connection
+(13 errors, 0 warnings, 0 messages)
